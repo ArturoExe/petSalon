@@ -9,14 +9,33 @@
 <body>
     <!---Create a form  name,age,gender breed sevice owner contact--->
 
-        <div class=form-box>
-            <form action="">
-                <label for="name" >Pet Name</label><br>
-                <input type="text" class="petName"></input>
-                <button onclick="register();">REGISTER</button>
+        <div class="form-box">
+            <h2>Register a new pet</h2>
+
+            <form>
+                <div class="form-control">
+                    <input type="text"  id="txtpetName" placeholder="Enter the pet name"></input>
+                </div>
+
+                <div class="form-control">
+                    <input type="number"   id="txtAge" placeholder="Enter the pet age"></input>
+
+                </div>
+
+                <div class="form-control">
+
+    <p>Select pet gender</p> 
+    <input type="radio" id="rdbMale" name="gender" value="male" checked="true">
+    <label for="rdbMale">Male</label><br>
+    <input type="radio" id="rdbFemale" name="gender" value="female">
+    <label for="rdbFemale">Female</label><br> 
+                </div>
+                
 
           
             </form>
+
+            <button onclick="register();">REGISTER</button>
         </div>
 
         <div id="salonInformation">
