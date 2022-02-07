@@ -13,17 +13,17 @@ let salon={
 
 }
 
+//ASSIGNMENT 1
+function displayPetNames(){
 
-// function displayPetNames(){
-
-//   salon.pets.forEach((element)=> {
-//     console.log(element.name);
-//   });
+  salon.pets.forEach((element)=> {
+    console.log(element.name);
+  });
     
-// //   alert(`They are ${salon.pets.length} on the line`)
-// }
+   alert(`They are ${salon.pets.length} on the line`)
+}
 
-// // displayPetNames();
+displayPetNames();
 
 
 //Create the constructor
@@ -67,8 +67,8 @@ let register = () => {
     //log the pet info
     console.log(newPet);
     console.log(salon.pets);
-
-    
+    alert("Pet Registered")
+    displayPetNames();
 };
 
 
