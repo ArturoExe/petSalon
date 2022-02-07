@@ -1,0 +1,76 @@
+
+nav{
+    transform: translateY(-1.3rem);
+}
+.form-box{
+    display: block;
+    text-align: center;
+    width: 50rem;
+    height: 70rem;
+    margin: 0 auto;
+    box-shadow: 0.4rem 0.3rem  1rem rgb(165, 163, 163);
+}
+
+.form-box h2{
+    padding: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.35rem;
+}
+
+.form-control{
+    margin: 2rem;
+}
+
+.form-control input{
+    border: none;
+    border-bottom: 2px solid rgb(92, 88, 88) ; 
+   
+
+}
+
+.form-control input:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(233, 166, 90) ; 
+
+   
+
+}
+
+.radio label{
+    margin: 1rem;
+}
+
+.form-control select{
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    border-bottom: 2px solid rgb(92, 88, 88) ; 
+
+}
+
+
+button{
+    
+    border: none;
+    background-color: #4ac0ff;
+    height: 3rem;
+    width: 10rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.3rem;
+    box-shadow:4px 4px #ffc30f;
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+
+button:hover{
+    background-color:#ffc30f ;
+    box-shadow:4px 4px  #4ac0ff;
+    
+}
+
+
+
+
+

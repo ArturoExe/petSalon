@@ -29,14 +29,15 @@ displayPetNames();
 //Create the constructor
 class Pets{
 
-    constructor(name,age,gender){
+    constructor(name,age,breed,service,gender,date,ownerInfo){
 
         this.name=name;
-        // this.breed.breed;
+        this.breed=breed;
         this.age=age;
         this.gender=gender
-        // this.service=service;
-        // this.owner=onwer;
+        this.service=service;
+        this.date=date;
+        this.ownerInfo=ownerInfo;
     }
 
 
@@ -46,11 +47,18 @@ class Pets{
 
 
 let register = () => {
-
+    let form=document.getElementById("petForm");
     let name=document.getElementById("txtpetName").value;
     let age=document.getElementById("txtAge").value;
+    let breed=document.getElementById("txtBreed").value;
+    let service=document.getElementById("txtService").value;
     let gender=document.getElementById("rdbMale").checked;
-   //check if the gender
+    let date=document.getElementById("txtDate").value;    
+    let ownerName=document.getElementById("txtownerName").value;
+    let ownerPhone=document.getElementById("txtownerPhone").value;
+    let ownerAddress=document.getElementById("txtownerAddress").value;
+
+   //check if the gender 
     if(gender==true){
         gender="Male"
     }else
@@ -58,8 +66,9 @@ let register = () => {
         gender="Female"
     }
   
+   
     //Create new pet
-    let newPet=new Pets(name,age,gender)
+    let newPet=new Pets(name,age,breed,service,gender,date,{ ownerName,ownerPhone,ownerAddress})
 
     //Push the pet to the pets array
     salon.pets.push(newPet);
@@ -67,9 +76,9 @@ let register = () => {
     //log the pet info
     console.log(newPet);
     console.log(salon.pets);
-    alert("Pet Registered")
-    displayPetNames();
-};
+    alert("Pet Registered");
+    form.reset();
+}
 
 
 

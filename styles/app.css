@@ -1,6 +1,9 @@
 /*GLOBAL SETTINGS*/
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 
 
 
@@ -10,6 +13,8 @@ body{
     margin: 0;
     background-color: rgb(255, 255, 255);
     font-family: 'Work Sans',sans-serif;
+    overflow-y: scroll;
+   
 }
 
 a{
@@ -22,11 +27,15 @@ a{
 
 
 /*NAVIGATION BAR*/
+
 .menu i{
     margin: 0.3rem;;
 }
 
 nav{
+    z-index: 10;
+    width: 100%;
+    position: fixed;
     display: flex;
     background-color:#ff003c;
     padding: 0.5rem;
@@ -58,9 +67,28 @@ align-items: center;
 
 }
 
+.schelude{
+   color: rgb(7, 6, 7);;
+
+}
+
+nav a:hover{
+    color: aquamarine;
+}
+
+.schelude:hover{
+    color: yellow;
+}
+
 
 /*MAIN AREA*/
+
+main{
+    transform: translateY(3rem);
+    z-index: -1;
+}
 .hero{
+    
     display: flex;
     box-shadow: 0px 10px 10px rgb(160, 158, 158);
 }
@@ -73,7 +101,7 @@ align-items: center;
 }
 
 .hero img{
-
+    
     display: block; 
     width: 50rem;
     height: auto;
@@ -99,8 +127,35 @@ align-items: center;
     font-weight: 600;
 }
 
-.more-info p{
-
-    padding: 2rem 20rem;
+.more-info {
+    text-align: center;
+    padding: 9rem 20rem;
+  
 }
 
+
+/*SERVICES*/
+
+.services{
+    padding: 9rem 20rem;
+}
+.services-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+/*ABOUT US SECTION*/
+
+.about-us{
+    background-image: url("/img/Layer 1.svg");
+    height: 50rem;
+    background-size: cover;
+    
+    
+}
+
+.about-us-text{
+    text-align: center;
+    padding: 9rem 20rem;
+}

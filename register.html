@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smally's Pet Salon</title>
     <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/register.css">
+    <script src="https://kit.fontawesome.com/3ab3c9d9c1.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -20,10 +22,10 @@
                </div>
 
             <div class="menu">
-                <a href="#"><i class="fas fa-home"></i>HOME</a>
-                <a href="#"><i class="fas fa-bath"></i>SERVICES</a>
-                <a href="#"><i class="fas fa-paw"></i>ABOUT US</a>
-                <a href="register.html"><i class="fas fa-calendar-alt"></i>SCHELUDE</a>
+                <a href="index.html"><i class="fas fa-home"></i>HOME</a>
+                <a href="index.html#services"><i class="fas fa-bath"></i>SERVICES</a>
+                <a href="index.html#about"><i class="fas fa-paw"></i>ABOUT US</a>
+                <a href="register.html" class="schelude"><i class="fas fa-calendar-alt"></i>SCHELUDE</a>
             </div>
             
         </nav>
@@ -34,42 +36,80 @@
     <!---Create a form  name,age,gender breed sevice owner contact--->
 
 
+<main>
+    <div class="form-box">
+        <h2>Register a new pet</h2>
+
+        <form id="petForm">
+            <div class="form-control">
+                <input type="text"  id="txtpetName" placeholder="Enter the pet name"></input>
+            </div>
+
+            <div class="form-control">
+                <input type="number"   id="txtAge" placeholder="Enter the pet age"></input>
+
+            </div>
+            
+            <div class="form-control">
+                <input type="text"   id="txtBreed" placeholder="Enter the breed"></input>
+
+            </div>
 
 
-        <div class="form-box">
-            <h2>Register a new pet</h2>
+            <div class="form-control">
+                <select name="service" id="txtService" default="" class="decorated">
+                    <option value="service-default"></option>
 
-            <form>
-                <div class="form-control">
-                    <input type="text"  id="txtpetName" placeholder="Enter the pet name"></input>
-                </div>
+                    <option value="Grooming">Grooming</option>
+                    <option value="Daycare">Daycare</option>
+                    <option value="Haircut">Haircut</option>
 
-                <div class="form-control">
-                    <input type="number"   id="txtAge" placeholder="Enter the pet age"></input>
+                </select>
+            </div>
+            <div class="form-control radio">
 
-                </div>
+                 <p>Select pet gender</p> 
+                     <label for="rdbMale"><input type="radio" id="rdbMale" name="gender" value="male" checked="true">  Male  </label>
+                    
+                        <label for="rdbFemale"> <input type="radio" id="rdbFemale" name="gender" value="female">Female</label> 
+            </div>
 
-                <div class="form-control">
+            <label for="date">Select Date</label>
+            <div class="form-control">
+                <input type="date"   id="txtDate" name="date"></input>
 
-    <p>Select pet gender</p> 
-    <input type="radio" id="rdbMale" name="gender" value="male" checked="true">
-    <label for="rdbMale">Male</label><br>
-    <input type="radio" id="rdbFemale" name="gender" value="female">
-    <label for="rdbFemale">Female</label><br> 
-                </div>
-                
+            </div>
+      
+            
+            <h2>owner information</h2>
+            <div class="form-control">
+                <input type="text"   id="txtownerName" placeholder="Enter Name"></input>
 
-          
-            </form>
+            </div>
 
-            <button onclick="register();">REGISTER</button>
-        </div>
+            <div class="form-control">
+                <input type="text"   id="txtownerPhone" placeholder="Enter Phone"></input>
 
-        <div id="salonInformation">
+            </div>
 
-        </div>
+            <div class="form-control">
+                <input type="text"   id="txtownerAddress" placeholder="Enter Address"></input>
 
-    <script src="scripts/test2.js"></script>
+            </div>
+      
+        </form>
+
+        <button onclick="register();" >REGISTER</button>
+    </div>
+
+    <div id="salonInformation">
+
+    </div>
+
+</main>
+
+       
+  
     <script src="scripts/register.js"></script>
     <script src="scripts/displayInfo.js"></script>
 </body>
