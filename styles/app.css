@@ -21,6 +21,7 @@ a{
     text-decoration: none;
     color: #ffff;
     font-weight: 700;
+    font-size: 1rem;
     
     
 }
@@ -38,7 +39,7 @@ nav{
     position: fixed;
     display: flex;
     background-color:#ff003c;
-    padding: 0.5rem;
+    
     justify-content: space-between;
 }
 
@@ -129,7 +130,7 @@ main{
 
 .more-info {
     text-align: center;
-    padding: 9rem 20rem;
+    padding: 9rem 10rem;
   
 }
 

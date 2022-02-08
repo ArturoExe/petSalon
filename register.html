@@ -57,9 +57,8 @@
 
 
             <div class="form-control">
-                <select name="service" id="txtService" default="" class="decorated">
-                    <option value="service-default"></option>
-
+                <select  name="service" id="selService" onclick="select_option()" size="1">
+                    <option value="service-default" selected>select a service</option>
                     <option value="Grooming">Grooming</option>
                     <option value="Daycare">Daycare</option>
                     <option value="Haircut">Haircut</option>
@@ -102,10 +101,19 @@
         <button onclick="register();" >REGISTER</button>
     </div>
 
-    <div id="salonInformation">
+   <div class="pet-box">
+    <h1>Registered Pets</h1>
+
+    <div class="pets" id="petList">
+        <!-- Display Pets -->
+            
 
     </div>
-
+   </div>
+   
+    
+    <div id="salonInformation">
+    </div>
 </main>
 
        

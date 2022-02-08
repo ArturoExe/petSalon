@@ -42,18 +42,37 @@ nav{
 }
 
 .form-control select{
-    width: 10rem;
+    /* width: 10rem;
     height: 2rem;
     border: none;
     border-bottom: 2px solid rgb(92, 88, 88) ; 
+    font-size: 1rem; */
 
+    z-index: 1800; 
+    background: #fff; 
+    height: 33px; 
+    width: 30%;
+    height: 3rem;
+   
 }
+    
+select option:checked {
+    background: #e62929 -webkit-linear-gradient(bottom, #e62929 0%, #e62929 100%);
+  }
+  select option:hover {
+    background: #e62929 -webkit-linear-gradient(bottom, #e62929 0%, #e62929 100%);
+    color: #fff;
+  }
+  select option {
+    padding:8px;
+    
+  }
 
 
 button{
     
     border: none;
-    background-color: #4ac0ff;
+    background-color: #f52929;
     height: 3rem;
     width: 10rem;
     font-weight: 700;
@@ -70,7 +89,25 @@ button:hover{
     
 }
 
+.pet-box h1{
+    text-align: center;
+    margin: 5rem 0;
+}
+.pets{
+    margin:2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 3rem;
+}   
 
+.pet-card{
+    margin:0 auto;
+    background-color: #ffc30f;
+    padding: 3rem;
+    border-radius: 2%;
+}
 
 
 
