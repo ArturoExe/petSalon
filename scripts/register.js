@@ -50,8 +50,13 @@ class Pets{
 
 
 let register = () => {
-    //Capture the values from the form
+   
+    //reset the card so they cant be duplicated
     document.getElementById("petList").innerHTML="";
+    document.getElementById("rowTarget").innerHTML="";
+
+        //Capture the values from the form
+
     let form=document.getElementById("petForm");
     let name=document.getElementById("txtpetName").value;
     let age=document.getElementById("txtAge").value;
@@ -62,7 +67,7 @@ let register = () => {
     let ownerName=document.getElementById("txtownerName").value;  
     let ownerPhone=document.getElementById("txtownerPhone").value;
     let ownerAddress=document.getElementById("txtownerAddress").value;
-
+    
    //check if the gender 
     if(gender==true){
         gender="Male"
@@ -88,7 +93,11 @@ let register = () => {
 
     //Display added cards
     printPetCard();
+    printTable();
+    
+
 }
+
 
 //Displays the registered pet on the table
 let printPetCard = () => {
@@ -99,10 +108,17 @@ let printPetCard = () => {
       
     //append the tmp into the HTML
     document.getElementById("petList").innerHTML+=createCard(salon.pets[i]);
-    }
+  
 
+}};
 
-};
+let printTable = () => { 
+    for (let i = 0; i < salon.pets.length; i++) {
+      
+    //append the tmp table in HTML
+    document.getElementById("rowTarget").innerHTML+=createRow(salon.pets[i]);
+
+}};
 
 
 let createCard = (pet) => {
@@ -120,7 +136,23 @@ let createCard = (pet) => {
         <p>${pet.ownerInfo.phone}</p>
         <p>${pet.ownerInfo.address}</p>
     </div>`;
+
 };
+
+
+let createRow=(pet)=>{
+//return the row
+    return ` <tr>
+    <th scope="row"></th>
+    <td>${pet.name}</td>
+    <td>${pet.age}</td>
+    <td>${pet.breed}</td>
+    <td>${pet.service}</td>
+    <td>${pet.gender}</td>
+    <td >${pet.date}</td>
+  </tr>`;
+
+}
 
 //initial load on the webpage
 let init = () => {
@@ -130,6 +162,7 @@ let init = () => {
     salon.pets.push(soby,nala);
     displayPetNames();
     printPetCard();
+    printTable();
 };
 
 

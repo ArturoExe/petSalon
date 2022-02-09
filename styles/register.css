@@ -1,7 +1,4 @@
 
-nav{
-    transform: translateY(-1.3rem);
-}
 .form-box{
     display: block;
     text-align: center;
@@ -18,8 +15,8 @@ nav{
     letter-spacing: 0.35rem;
 }
 
-.form-control{
-    margin: 2rem;
+.form-control {
+    border: none !important;
 }
 
 .form-control input{
