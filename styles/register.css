@@ -115,7 +115,38 @@ button:hover{
 .search-entry{
 display: flex;
 justify-content: center;
+margin: 2rem;
 }
+
+.search-entry input{
+    width: 20rem;
+    margin: 1rem;
+}
+
+.search-entry button{
+ 
+    margin: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: #ffffff;
+    width: 10rem;
+    height: 3.9rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.3rem;
+    border: 1px solid black;
+    box-shadow: none;
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+
+
+.search-entry button:hover{
+ 
+    background-color: #e20000;
+  
+}
+
 
 .go-back{
     display: none;
