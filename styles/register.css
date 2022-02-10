@@ -108,3 +108,15 @@ button:hover{
 
 
 
+.btn-remove{
+    color: #fff;
+}
+
+.search-entry{
+display: flex;
+justify-content: center;
+}
+
+.go-back{
+    display: none;
+}

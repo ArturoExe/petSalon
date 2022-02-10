@@ -102,8 +102,18 @@
         <button onclick="register();" >REGISTER</button>
     </div>
 
+
+
+    <div class="search-entry">
+        <input type="text" id="txtSearch">
+        <button onclick="searchPet();">Search Entry</button>
+        <button onclick="goBack()" class="go-back">Go back</button>
+
+    </div>
+
    <div class="pet-box">
-             <h1>Registered Pets</h1>
+      
+             <h1 id="headerList">Registered Pets</h1>
 
                  <div class="pets" id="petList">
                          <!-- Display Pets -->
@@ -122,8 +132,6 @@
                             <th scope="col">Service</th>
                             <th scope="col">Gender</th>
                             <th scope="col">Appointment</th>
-    
-    
                           </tr>
                         </thead>
                         <tbody id="rowTarget" >

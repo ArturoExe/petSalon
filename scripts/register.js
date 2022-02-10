@@ -46,10 +46,25 @@ class Pets{
 
 }
 
+const removeRegister = (index) => { 
+
+    if(index<salon.pets.length){
+        salon.pets.splice(index,1);
+
+
+    }
+
+     //reset the card so they cant be duplicated
+     document.getElementById("petList").innerHTML="";
+     document.getElementById("rowTarget").innerHTML="";
+
+     printPetCard();
+     printTable();
+ }
 
 
 
-let register = () => {
+const register = () => {
    
     //reset the card so they cant be duplicated
     document.getElementById("petList").innerHTML="";
@@ -100,19 +115,22 @@ let register = () => {
 
 
 //Displays the registered pet on the table
-let printPetCard = () => {
+const printPetCard = () => {
+
+    document.getElementById("petList").innerHTML="";
+    document.getElementById("rowTarget").innerHTML="";
     //tarvel the array
 
     for (let i = 0; i < salon.pets.length; i++) {
         //create the card
       
     //append the tmp into the HTML
-    document.getElementById("petList").innerHTML+=createCard(salon.pets[i]);
+    document.getElementById("petList").innerHTML+=createCard(salon.pets[i],i);
   
 
 }};
 
-let printTable = () => { 
+const printTable = () => { 
     for (let i = 0; i < salon.pets.length; i++) {
       
     //append the tmp table in HTML
@@ -120,8 +138,43 @@ let printTable = () => {
 
 }};
 
+//Search an specific name on the array
+const searchPet = () => {
 
-let createCard = (pet) => {
+    document.querySelector(".go-back").style.display="inline";
+    let name=document.getElementById("txtSearch").value;
+
+  for (let i = 0; i < salon.pets.length; i++) {
+
+        if(name.toLowerCase()==salon.pets[i].name.toLowerCase()){
+          //append the tmp into the HTML
+          console.log("found");
+
+            //reset the card so they cant be duplicated
+             document.getElementById("petList").innerHTML="";
+             document.getElementById("rowTarget").innerHTML="";
+
+             //get the exact element of the array
+         document.getElementById("petList").innerHTML+=createCard(salon.pets[i],i);
+         document.getElementById("rowTarget").innerHTML+=createRow(salon.pets[i]);
+
+        }
+    
+    }
+
+    document.getElementById("headerList").innerHTML="Search Result";
+} 
+
+const goBack = () => {
+
+    document.querySelector(".go-back").style.display="none";
+
+    printPetCard();
+    printTable();
+ }
+
+
+const createCard = (pet,index) => {
     //create the card with all the data
     return `<div class="pet-card">
         <h3>Name:${pet.name}</h3>
@@ -135,12 +188,13 @@ let createCard = (pet) => {
         <p>${pet.ownerInfo.name}</p>
         <p>${pet.ownerInfo.phone}</p>
         <p>${pet.ownerInfo.address}</p>
-    </div>`;
+        <button onclick="removeRegister(${index});" class="btn-remove">Remove</button>
+    </div> `;
 
 };
 
 
-let createRow=(pet)=>{
+const createRow=(pet)=>{
 //return the row
     return ` <tr>
     <th scope="row"></th>
@@ -155,7 +209,7 @@ let createRow=(pet)=>{
 }
 
 //initial load on the webpage
-let init = () => {
+const init = () => {
   
     let soby=new Pets("SOBY",50,"Dane","Haircut","Male","none","Daniel","5555-444-444","Ave.orange");
     let nala=new Pets("Nala",10,"golden","Haircut","Female","Today","Joe","5522-444-444","Ave.Russell");
